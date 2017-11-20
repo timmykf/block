@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<style>
+    form {
+        border: 2px solid #C0C0C0;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #5A5A5A;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #3C7CE9;
+        color: white;
+        padding: 20px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #f44336;
+    }
+
+    .imgcontainer {
+        text-align: center;
+    }
+
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+        text-decoration: none;
+    }
+    /* Change styles for span and cancel button on extra small screens */
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+
+    .header {
+        background-color: #11408A;
+        overflow: hidden;
+        text-align: center;
+        color: whitesmoke;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .backhome {
+        background-color: #f0a213;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+        width: 20%;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <h1 style="font-size: 72px",font-family: "Arial" ><img src="HTL_Braunau_Logo.svg.png" alt="HTL Logo" style="width:150px; height:80px;"><b> COIN</b></h1>
+    </div>
+
+    <div class="backhome">
+        <a class="backhome" href="/Users/Fips/Desktop/HTL/5AHELS/DIPLOMARBEIT/Homepage.html">Zurück zur Startseite</a>
+    </div>
+
+    <form form action = "http://localhost:8081/process_login" method = "POST">
+
+        <div class="container">
+            <label><b>Benutzername</b></label>
+            <input id="uname" type="text" placeholder="Benutzername eingeben" name="first_name" required>
+
+            <label><b>Passwort</b></label>
+            <input id="psw" type="password" placeholder="Passwort eingeben" name="password" required>
+
+            <button id="Profil" type="submit" value="submit">Anmelden</button>
+            <input type="checkbox" checked="checked"> Eingeloggt bleiben
+        </div>
+
+        <div class="container">
+            <button type="button" class="cancelbtn">Abbrechen</button>
+            <span class="psw"><a href="#">Passwort vergessen</a></span>
+        </div>
+    </form>
+<script>
+    function profileFunction(){
+        var current = "/Users/Fips/Desktop/HTL/5AHELS/DIPLOMARBEIT/Anmelden.html";
+        window.close(current);
+        window.open("/Users/Fips/Desktop/HTL/5AHELS/DIPLOMARBEIT/Profil.html");
+    }
+</script>
+</body>
+
+</html>
